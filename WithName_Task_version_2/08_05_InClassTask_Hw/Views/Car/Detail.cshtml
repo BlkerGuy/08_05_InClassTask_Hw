@@ -1,0 +1,13 @@
+﻿@model HomeVM
+
+<div class="mt-4">
+    <h4 class="ms-3 text-secondary">Brand Name: <span class="text-dark">@Model.brands.Find(b=>b.Id==Model.cars.Find(c=>c.BrandId!=null).BrandId).Name</span> </h4>
+<ol>
+     @foreach (CarDetail cardetail in Model.CarDetails)
+    {
+         <li>Car Name: <span class="fw-bold">@cardetail.Name</span></li>
+         <li>Car Color: <span class="fw-bold">@cardetail.Color</span></li>
+            <li>Car Years: <span class="fw-bold">@cardetail.Year</span></li>
+    }
+</ol>
+</div>

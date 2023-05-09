@@ -1,0 +1,16 @@
+﻿@model HomeVM
+
+
+<div class="mt-4">
+    <h4 class="ms-3 text-secondary">Brand Name: <span class="text-dark">@Model.brands.Find(b=>b.Id==Model.cars.Find(c=>c.BrandId!=null).BrandId).Name</span> </h4>
+<ol>
+    @foreach (Car cars in Model.cars)
+    {
+        <li><a asp-controller="Car" asp-action="Detail" asp-route-id="@cars.Id">@cars.Name</a></li>
+    }
+</ol>
+
+</div>
+
+
+

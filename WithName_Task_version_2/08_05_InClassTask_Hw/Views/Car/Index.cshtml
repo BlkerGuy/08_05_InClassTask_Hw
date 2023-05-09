@@ -1,0 +1,11 @@
+﻿@model HomeVM
+
+<div class="mt-4">
+    <h4 class="ms-3">Brands:</h4>
+<ol>
+    @foreach (Brand brand in Model.brands)
+    {
+        <li class=""><a asp-controller="Car" asp-action="CarIndex" asp-route-id="@brand.Id">@brand.Name</a></li>
+    }
+</ol>
+</div>
