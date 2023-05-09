@@ -5,7 +5,7 @@ namespace _08_05_InClassTask_Hw.Controllers
 {
     public class HomeController : Controller
     {
-        public readonly List<Brand> _brands;
+        private readonly List<Brand> _brands;
 
         public HomeController()
         {

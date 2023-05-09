@@ -1,7 +1,6 @@
 ﻿@model List<Car>
-
 <ul>
-    <h2></h2>
+    <h4>Brand Name: </h4>
     @foreach (Car cars in Model)
     {
         <li><a asp-controller="Car" asp-action="Detail" asp-route-id="@cars.Id">@cars.Name</a></li>

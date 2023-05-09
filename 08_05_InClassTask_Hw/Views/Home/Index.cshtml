@@ -3,6 +3,6 @@
 <ul>
     @foreach (Brand brand in Model)
     {
-        <li><a asp-controller="Car" asp-action="Index" asp-route-id="@brand.Id">@brand.Name</a></li>
+        <li><a asp-controller="Car" asp-action="Index" asp-route-name="@brand.Name" asp-route-id="@brand.Id">@brand.Name</a></li>
     }
 </ul>
